@@ -1,4 +1,4 @@
-console.log('Client side JS file loaded')
+//console.log('Client side JS file loaded')
 //const fetch =  require('node-fetch')
 
 
