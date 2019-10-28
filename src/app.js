@@ -2,11 +2,11 @@ const path = require('path')
 const hbs = require('hbs')
 const express= require ('express')
 const geo= require ('./utils/geocode')
-//const fetch =  require('node-fetch')
+//  const fetch =  require('node-fetch')
 
 const forecast = require('./utils/forecast')
 const app = express()
-
+const port = process.env.PORT ||3000;
 
 
 const publicDirPath= path.join(__dirname, '../public')
@@ -132,7 +132,7 @@ app.get('*', (req,res)=>{
 })
 
 
-app.listen(3000, ()=>{
+app.listen(port, ()=>{
     console.log('Server is up on host 3000')
 })
 
