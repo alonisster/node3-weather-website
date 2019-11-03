@@ -9,11 +9,13 @@ const forecast= (latitude,longtitude, callback) => {
             callback('Couldnt find location. wrong long/lat',undefined)
         }else{
             const temp= response.body;
+            //console.log(temp);
             const data= {
                 location: temp.timezone,
                 latitude,
                 longtitude,
-                summary: temp.currently.summary
+                summary: temp.currently.summary,
+                visibility: temp.currently.visibility
             }
             callback(undefined, data);
         }

@@ -22,7 +22,8 @@ weatherForm.addEventListener('submit',(e)=>{
             }else{
             
                 messageOne.textContent = res.location;
-                messageTwo.textContent = res.forecast;
+                messageTwo.textContent = res.forecast+"\nAnd the visibility level is "+res.visibility;
+                
             }
         })
     })
